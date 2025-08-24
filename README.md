@@ -5,9 +5,10 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Parameters](https://img.shields.io/badge/Parameters-1.05M-lightgrey)
 
-An advanced Convolutional Neural Network (CNN) designed and trained specifically on reCAPTCHA v2 challenge images, achieving high efficiency and robust performance while maintaining a lightweight architecture with just over 1 million parameters.
+An advanced Convolutional Neural Network (CNN) designed and trained specifically on reCAPTCHA v2 challenge images, achieving high efficiency and robust performance while maintaining a lightweight architecture with just over 1 million parameters.This model is optimized for automation tasks requiring real-time inference on CAPTCHA-like image datasets.
 
-This model is optimized for automation tasks requiring real-time inference on CAPTCHA-like image datasets.
+>![sample images](https://github.com/aryankushwaha09/CNN-RECAPTCHA-V2-solver/blob/main/download%20(2).png)
+
 
 ## 🚀 Features
 
@@ -81,7 +82,8 @@ graph TD
 | Dropout | 256 | 0 | 0% |
 | Dense (Output) | N classes | 257 × N | ~88%* |
 
-*Note: Output layer parameters vary based on number of classes (N)*
+>[!Note]
+Output layer parameters vary based on number of classes (N)
 
 **Total Trainable Parameters**: ~1,050,000 (varies with class count)
 
@@ -111,8 +113,8 @@ from model import load_trained_model
 from utils import preprocess_image
 
 # Load the trained model
-model = load_trained_model("weights/recaptcha_model_pro.keras")
-
+model = load_trained_model("main/recaptcha_model_original_dist_gpu%20(1).keras")
+#plss cheack the path of the model one time before any errors raises.
 # Preprocess image
 img = preprocess_image("sample_captcha.png", target_size=(128, 128))
 
